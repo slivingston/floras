@@ -35,7 +35,9 @@ jobs:
             conda list
 
       - name: Add pdm
-        run: pip install pdm
+        run: |
+          pip install pdm
+          pdm config venv.backend conda
 
       - name: Install package
         run: pdm install
