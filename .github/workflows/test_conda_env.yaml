@@ -23,6 +23,7 @@ jobs:
       - name: Create environment with conda
         uses: conda-incubator/setup-miniconda@v3
         with:
+          python-version: ${{ matrix.python }}
           activate-environment: anaconda-client-env
           miniconda-version: "latest"
           environment-file: envs/conda_env.yaml
