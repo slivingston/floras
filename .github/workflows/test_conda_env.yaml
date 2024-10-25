@@ -49,7 +49,9 @@ jobs:
         run: pip install pdm
 
       - name: Install package
-        run: pdm install
+        run: |
+          pdm config venv.backend conda
+          pdm install
 
       - name : Install Package for Testing
         run : conda install pytest
