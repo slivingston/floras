@@ -20,6 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install required packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+              libgraphviz-dev \
+              graphviz
+
       - name: Create environment with conda
         uses: conda-incubator/setup-miniconda@v3
         with:
