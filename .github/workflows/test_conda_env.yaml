@@ -54,6 +54,7 @@ jobs:
           which python
           which pip
           which pdm
+          python -V
           pdm install
 
       - name : Install Package for Testing
