@@ -50,10 +50,10 @@ jobs:
 
       - name: Install package
         run: |
+          pdm config venv.backend conda
+          which python
           which pip
           which pdm
-          pdm use -f /usr/share/miniconda/envs/anaconda-client-env
-          pdm config venv.backend conda
           pdm install
 
       - name : Install Package for Testing
